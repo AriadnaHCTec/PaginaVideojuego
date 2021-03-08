@@ -1,63 +1,73 @@
 <!DOCTYPE html><!-- Para decir que es HTML5 -->
+<!--En el archivo de prueba.html está el asterisco hermoso color rojo-->
 <html>
-    <head>
-        <title>Descarga</title>
-        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>        
-        <meta name="viewport" content="width=device-width, initial-scale =1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">        
-        <style>
-            /* Make the image fully responsive */
-            .carousel-inner img {
-              width: 100%;
-              height: 100%;
-            }
-            </style>
-    </head>
-    <body>        
-       <header>
+  <head>
+    <title>Formulario</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>        
+    <meta name="viewport" content="width=device-width, initial-scale =1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">        
+  </head>
+  <body>   
+    <div class="container">
+      <form action="#" method="GET">
+        
+        <div class="form-group">
+          <label for="nombre de usuario">Nombre de usuario: </label>
+          <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre">
+        </div>
 
-       </header>                
-       <h1>Jueguito</h1>
-       
-       <!--Página carousel: https://www.w3schools.com/bootstrap4/bootstrap_carousel.asp-->
-       <div id="demo" class="carousel slide" data-ride="carousel">
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/Example1.jpg" alt="Los Angeles" width="1100" height="500">
-            <div class="carousel-caption">
-              <h3>Los Angeles</h3>
-              <p>We had such a great time in LA!</p>
-            </div>   
-          </div>
-          <div class="carousel-item">
-            <img src="images/Example1.jpg" alt="Chicago" width="1100" height="500">
-            <div class="carousel-caption">
-              <h3>Chicago</h3>
-              <p>Thank you, Chicago!</p>
-            </div>   
-          </div>
-          <div class="carousel-item">
-            <img src="images/Example1.jpg" alt="New York" width="1100" height="500">
-            <div class="carousel-caption">
-              <h3>New York</h3>
-              <p>We love the Big Apple!</p>
-            </div>   
+        <div class="form-group">
+          <label for="emailUsuario">Correo: </label>
+          <input type="email" class="form-control" placeholder="Ingresa tu correo" id="emailUsuario" name="emailUsuario">
+        </div>
+
+        <div class="form-group">
+          <label for="passwordUsuario">Password: </label>
+          <input type="password" class="form-control" placeholder="Ingresa tu password" id="passwordUsuario" name="passwordUsuario">
+        </div>
+
+        <div class="form-group">
+          <label for="fechaNacimiento">Fecha de nacimiento: </label>
+          <input type="date" class="form-control" placeholder="Fecha de nacimiento" id="fechaNacimiento" name="fechaNacimiento">
+        </div>
+
+        <div class="form-group">
+          <label for="sexo">Sexo: </label><br>
+          <input type="radio" id="hombre" name="genero" value="hombre">
+          <label for="hombre">Hombre</label>
+          <input type="radio" id="mujer" name="genero" value="mujer">
+          <label for="mujer">Mujer</label><br>
+        </div>            
+
+        <div class="form-group dropdown">            
+          <p>Estado</p>
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"></button>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Edo Mex</a>
+            <a href="#" class="dropdown-item">CDMX</a>
+            <a href="#" class="dropdown-item">Tlaxcala alv</a>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      </div>
 
+        <div class="form-group">
+          <label for="profesion">Profesion: </label>
+          <input type="text" class="form-control" placeholder="Profesion" id="profesion" name="profesion">
+        </div>            
 
+        <div class="form-group">
+          <p> Carrera de interés </p>
+          <input type="checkbox" id="carrera1" name="carrera1" value="Medicina">
+          <label for="carrera1"> Medicina</label><br>
+          <input type="checkbox" id="carrera2" name="carrera2" value="Ingeniería">
+          <label for="carrera2"> Ingeniería </label><br>
+          <input type="checkbox" id="carrera3" name="carrera3" value="Matemáticas">
+          <label for="carrera3"> Matemáticas</label>
+        </div>
+
+        <div class="form-group">
+          <label for="fotoPerfil">Foto de perfil: </label>
+          <input type="file" class="form-control" id="fotoPerfil" name="fotoPerfil">
+        </div>
 
        <h2>Descarga el juego dando click <a href="resources/Ejecutable.exe" download>aquí</a></h2>
         <br><br>
@@ -69,14 +79,14 @@
        <img src="Imagen1.jpg" id = "ima1" style="width:220px"/>
        <button onclick="f1()">Me pushas o que?</button>
        
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/G1IbRujko-A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/G1IbRujko-A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        <footer>
             <p>Creadores hermosos:</p>
             <p>El Mike, Javier, sarah xD y Ari</p>
             <p>Gracias unu</p>
        </footer>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
 </html>
