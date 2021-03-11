@@ -4,16 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/estiloTabla.css">
     </head>
-    <body style="background-color:white ; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-        <div style="background-color: #00a4a9;" class="container p-3 my-3 bg text-white">
+    <body>
+        <div id="titulo" class="container p-3 my-3 bg text-white">
             <center>
                 <h1 class="title"> Tabla de Datos </h1>
             </center>
         </div>
         <br>
         <div class="container">
-            <table class="table table-hover table-bordered" style="align-items:center; text-align:center">
+            <table class="table table-hover table-bordered" id = "tabla">
                 <thead>
                     <tr>
                         <th scope="col">ID </th>
@@ -86,15 +87,15 @@
         <br>
         <div class="container">
             <center>
-                <button style="background-color: #00a4a9;" type="button" ondblclick="anterior();" class="btn btn-success btn-jg">anterior</button>
-                <button style="background-color: #00a4a9;" type="button" onclick="siguiente();" class="btn btn-success btn-jg">siguiente</button>
+                <button id="btnNavegacion" type="button" ondblclick="anterior();" class="btn btn-success btn-jg">anterior</button>
+                <button id="btnNavegacion" type="button" onclick="siguiente();" class="btn btn-success btn-jg">siguiente</button>
             </center>
         </div>
 
         <br>
         <div class="container">
             <center>                            
-                <a href="index.html"><button style="background-color: #00a4a9;" type="button" class="btn btn-success btn-jg">Formulario</button></a>
+                <a href="index.html"><button id="btnNavegacion" type="button" class="btn btn-success btn-jg">Formulario</button></a>
             </center>
         </div>
 
